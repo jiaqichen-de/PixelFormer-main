@@ -192,6 +192,7 @@ Set the parameter filenames_file_eval data_splits/val16181619clips.txt
 Set the parameter checkpoint_path to pretrained/SemanticBins_Validation2
 ```
 python PixelFormerPlus/eval_semantic.py arguments_eval_habitat.txt
+```
 ## Testing
 Test the PixelFormer model and get depth maps on NYUv2:  
 Rename the network folder of PixelFormer model from networkssource to networks  
@@ -286,6 +287,14 @@ python PixelFormerPlus/test_semantic.py arguments_test_habitat.txt
 | :--- | :---: | :---: | :---: |  :---: |  :---: |  :---: |  :---: |  :---: |
 |[PixelFormer_KITTI] | 0.0517 | 0.0224 | 2.0895 | 0.1521 | 0.0777 | 0.9758 | 0.9973 | 0.9994 |
 |[PixelFormerPlus_KITTI] | 0.0508 | 0.0222 | 2.0681 | 0.1474 | 0.0773 | 0.9759 | 0.9973 | 0.9994 |
+|[PixelFormer_NYU] | 0.0517 | 0.0224 | 2.0895 | 0.1521 | 0.0777 | 0.9758 | 0.9973 | 0.9994 |
+|[PixelFormerPlus_NYU] | 0.0508 | 0.0222 | 2.0681 | 0.1474 | 0.0773 | 0.9759 | 0.9973 | 0.9994 |
+|[PixelFormer_Validation1] | 0.0119 | 0.0051 | 0.0781 | 0.0024 | 0.0302 | 0.9957 | 0.9991 | 0.9998 |
+|[PixelFormerPlus_Validation1] | 0.0075 | 0.0033 | 0.0367 | 0.0006 | 0.0155 | 0.9992 | 0.9998 | 1.0000 |
+|[SemanticBins_Validation1] | 0.0078 | 0.0034 | 0.0357 | 0.0005 | 0.0153 | 0.9992 | 0.9999 | 1.0000 |
+|[PixelFormer_Validation2] | 0.0736 | 0.0339 | 0.2673 | 0.0285 | 0.1179 | 0.9254 | 0.9912 | 0.9981 |
+|[PixelFormerPlus_Validation2] | 0.0670 | 0.0306 | 0.2541 | 0.0254 | 0.1081 | 0.9414 | 0.9924 | 0.9980 |
+|[SemanticBins_Validation2] | 0.0674 | 0.0307 | 0.2327 | 0.0214 | 0.1029 | 0.9490 | 0.9962 | 0.9990 |
 
 ## Acknowledgements
 Most of the code has been adpated from WACV 2023 paper [PixelFormer](https://github.com/ashutosh1807/PixelFormer) and CVPR 2022 paper [NewCRFS](https://github.com/aliyun/NeWCRFs). We thank them.
