@@ -1,0 +1,10 @@
+--data_path PixelFormerPlus/dataset/KITTI_Depth_Completion/raw 
+--gt_path PixelFormerPlus/dataset/KITTI_Depth_Completion/data_depth_annotated/train
+--filenames_file data_splits/eigen_test_files_with_gt.txt
+--input_height 352
+--input_width 1120
+--dataset kitti 
+--checkpoint_path newmodeltransposebilinear-27400-best_rms_2.06813
+--max_depth 80
+--do_kb_crop
+--save_viz

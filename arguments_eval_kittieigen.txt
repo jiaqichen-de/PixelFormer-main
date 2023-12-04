@@ -1,0 +1,16 @@
+--model_name pixelformer_kittieigen
+--encoder large07
+--dataset kitti
+--input_height 352
+--input_width 1120
+--max_depth 80
+--do_kb_crop
+
+--data_path_eval PixelFormerPlus/dataset/KITTI_Depth_Completion/raw
+--gt_path_eval PixelFormerPlus/dataset/KITTI_Depth_Completion/data_depth_annotated/train
+--filenames_file_eval data_splits/eigen_test_files_with_gt.txt
+--min_depth_eval 1e-3
+--max_depth_eval 80
+--garg_crop
+
+--checkpoint_path newmodeltransposebilinear-27400-best_rms_2.06813

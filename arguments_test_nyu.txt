@@ -1,0 +1,5 @@
+--data_path PixelFormerPlus/dataset/nyu/test 
+--gt_path PixelFormerPlus/dataset/nyu/test
+--filenames_file data_splits/nyudepthv2_test_files_with_gt.txt 
+--checkpoint_path newmodel-nyutransposebilinear58600-best_abs_rel_0.08849
+--save_viz

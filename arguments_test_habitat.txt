@@ -1,0 +1,6 @@
+--data_path PixelFormerPlus/dataset/habitat/habitat_sim_excl_static_2scenes_rgbJPEG/habitat_sim_DAVIS
+--gt_path PixelFormerPlus/dataset/habitat/habitat_sim_excl_static_2scenes_rgbJPEG/habitat_sim_DAVIS
+--filenames_file data_splits/val0102scenes.txt 
+--dataset habitat
+--checkpoint_path semanticbinval1model-131800-best_rms_0.03571  
+--save_viz
