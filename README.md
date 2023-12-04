@@ -10,7 +10,8 @@ The optimization for WACV 2023 paper 'Attention Attention Everywhere: Monocular 
 4. [Evaluation](#evaluation)
 5. [Testing](#testing)
 6. [Pretrained Models](#pretrainedmodels)
-7. [Models](#models)
+7. [Results](#results)
+8. [Acknowledgements](#acknowledgements)
 
 
 ## Installation
@@ -105,7 +106,7 @@ Set the parameter filenames_file to data_splits/val1.txt
 Set the parameter filenames_file_eval data_splits/val16181619clips.txt
 ```
 python PixelFormerPlus/train_semantic.py arguments_train_habitat.txt
-
+```
 ## Evaluation
 Evaluate the PixelFormer model on NYUv2:  
 Rename the network folder of PixelFormer model from networkssource to networks  
@@ -276,9 +277,18 @@ Set the parameter filenames_file_eval data_splits/val16181619clips.txt
 Set the parameter checkpoint_path to pretrained/SemanticBins_Validation2
 ```
 python PixelFormerPlus/test_semantic.py arguments_test_habitat.txt
-## Pretrained Models
+```
+## Pretrainedmodels
 * You can download the pretrained models from [here](https://drive.google.com/drive/folders/1CupMODnxBe4JJ15jbet3nz2xgTjL5ExM?usp=drive_link)
 
+## Results
+| Model | Abs.Rel | Log10 | RMSE | Sqr.Rel | RMSElog | a1 | a2 | a3| 
+| :--- | :---: | :---: | :---: |  :---: |  :---: |  :---: |  :---: |  :---: |
+|[PixelFormer_KITTI] | 0.0517 | 0.0224 | 2.0895 | 0.1521 | 0.0777 | 0.9758 | 0.9973 | 0.9994 |
+|[PixelFormerPlus_KITTI] | 0.0508 | 0.0222 | 2.0681 | 0.1474 | 0.0773 | 0.9759 | 0.9973 | 0.9994 |
+
+## Acknowledgements
+Most of the code has been adpated from WACV 2023 paper [PixelFormer](https://github.com/ashutosh1807/PixelFormer) and CVPR 2022 paper [NewCRFS](https://github.com/aliyun/NeWCRFs). We thank them.
 
 
 
