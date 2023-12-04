@@ -84,12 +84,201 @@ python PixelFormerPlus/train.py arguments_train_habitat.txt
 ```
 
 Training the PixelFormerPlus model on HabitatDyn Validation set 2:  
-Rename the network folder of PixelFormerPlus model to networks
+Rename the network folder of PixelFormerPlus model to networks  
 Modify the datapaths of ground truth and raw data in the config files 
 Set the parameter filenames_file to data_splits/val1.txt  
 Set the parameter filenames_file_eval data_splits/val16181619clips.txt
 ```
 python PixelFormerPlus/train.py arguments_train_habitat.txt
+```
+Training the SemanticBins model on HabitatDyn Validation set 1:    
+Modify the datapaths of ground truth and raw data in the config files 
+Set the parameter filenames_file to data_splits/val1.txt  
+Set the parameter filenames_file_eval data_splits/val0102scenes.txt
+```
+python PixelFormerPlus/train_semantic.py arguments_train_habitat.txt
+```
+
+Training the SemanticBins model on HabitatDyn Validation set 2:    
+Modify the datapaths of ground truth and raw data in the config files 
+Set the parameter filenames_file to data_splits/val1.txt  
+Set the parameter filenames_file_eval data_splits/val16181619clips.txt
+```
+python PixelFormerPlus/train_semantic.py arguments_train_habitat.txt
+
+## Evaluation
+Evaluate the PixelFormer model on NYUv2:  
+Rename the network folder of PixelFormer model from networkssource to networks  
+Modify the datapaths of ground truth and raw data in the config files
+Set the parameter checkpoint_path to pretrained/PixelFormer_NYU
+```
+python PixelFormerPlus/eval.py arguments_eval_nyu.txt
+```
+
+Evaluate the PixelFormer model on KITTI:  
+Rename the network folder of PixelFormer model from networkssource to networks  
+Modify the datapaths of ground truth and raw data in the config files
+Set the parameter checkpoint_path to pretrained/PixelFormer_KITTI
+```
+python PixelFormerPlus/eval.py arguments_eval_kitti.txt
+```
+Evaluate the PixelFormerPlus model on NYUv2:  
+Rename the network folder of PixelFormerPlus model from networkssource to networks  
+Modify the datapaths of ground truth and raw data in the config files
+Set the parameter checkpoint_path to pretrained/NewModel_NYU
+```
+python PixelFormerPlus/eval.py arguments_eval_nyu.txt
+```
+
+Evaluate the PixelFormerPlus model on KITTI:  
+Rename the network folder of PixelFormerPlus model from networkssource to networks  
+Modify the datapaths of ground truth and raw data in the config files
+Set the parameter checkpoint_path to pretrained/NewModel_KITTI
+```
+python PixelFormerPlus/eval.py arguments_eval_kitti.txt
+```
+Evaluate the PixelFormer model on HabitatDyn Validation set 1:
+Rename the network folder of PixelFormer model from networkssource to networks    
+Modify the datapaths of ground truth and raw data in the config files  
+Set the parameter filenames_file to data_splits/val1.txt  
+Set the parameter filenames_file_eval data_splits/val0102scenes.txt
+Set the parameter checkpoint_path to pretrained/PixelFormer_Validation1
+```
+python PixelFormerPlus/eval.py arguments_eval_habitat.txt
+```
+
+Evaluate the PixelFormer model on HabitatDyn Validation set 2:  
+Rename the network folder of PixelFormer model from networkssource to networks  
+Modify the datapaths of ground truth and raw data in the config files 
+Set the parameter filenames_file to data_splits/val1.txt  
+Set the parameter filenames_file_eval data_splits/val16181619clips.txt
+Set the parameter checkpoint_path to pretrained/PixelFormer_Validation2
+```
+python PixelFormerPlus/eval.py arguments_eval_habitat.txt
+```
+Evaluate the PixelFormerPlus model on HabitatDyn Validation set 1:  
+Rename the network folder of PixelFormerPlus model to networks  
+Modify the datapaths of ground truth and raw data in the config files 
+Set the parameter filenames_file to data_splits/val1.txt  
+Set the parameter filenames_file_eval data_splits/val0102scenes.txt
+Set the parameter checkpoint_path to pretrained/NewModel_Validation1
+```
+python PixelFormerPlus/eval.py arguments_eval_habitat.txt
+```
+
+Evaluate the PixelFormerPlus model on HabitatDyn Validation set 2:  
+Rename the network folder of PixelFormerPlus model to networks  
+Modify the datapaths of ground truth and raw data in the config files 
+Set the parameter filenames_file to data_splits/val1.txt  
+Set the parameter filenames_file_eval data_splits/val16181619clips.txt
+Set the parameter checkpoint_path to pretrained/NewModel_Validation2
+```
+python PixelFormerPlus/eval.py arguments_eval_habitat.txt
+```
+Evaluate the SemanticBins model on HabitatDyn Validation set 1:    
+Modify the datapaths of ground truth and raw data in the config files 
+Set the parameter filenames_file to data_splits/val1.txt  
+Set the parameter filenames_file_eval data_splits/val0102scenes.txt
+Set the parameter checkpoint_path to pretrained/SemanticBins_Validation1
+```
+python PixelFormerPlus/eval_semantic.py arguments_eval_habitat.txt
+```
+
+Evaluate the SemanticBins model on HabitatDyn Validation set 2:    
+Modify the datapaths of ground truth and raw data in the config files 
+Set the parameter filenames_file to data_splits/val1.txt  
+Set the parameter filenames_file_eval data_splits/val16181619clips.txt
+Set the parameter checkpoint_path to pretrained/SemanticBins_Validation2
+```
+python PixelFormerPlus/eval_semantic.py arguments_eval_habitat.txt
+## Testing
+Test the PixelFormer model and get depth maps on NYUv2:  
+Rename the network folder of PixelFormer model from networkssource to networks  
+Modify the datapaths of ground truth and raw data in the config files
+Set the parameter checkpoint_path to pretrained/PixelFormer_NYU
+```
+python PixelFormerPlus/test.py arguments_test_nyu.txt
+```
+
+Test the PixelFormer model and get depth maps on KITTI:  
+Rename the network folder of PixelFormer model from networkssource to networks  
+Modify the datapaths of ground truth and raw data in the config files
+Set the parameter checkpoint_path to pretrained/PixelFormer_KITTI
+```
+python PixelFormerPlus/text.py arguments_test_kitti.txt
+```
+Test the PixelFormerPlus model and get depth maps on NYUv2:  
+Rename the network folder of PixelFormerPlus model from networkssource to networks  
+Modify the datapaths of ground truth and raw data in the config files
+Set the parameter checkpoint_path to pretrained/NewModel_NYU
+```
+python PixelFormerPlus/test.py arguments_eval_test.txt
+```
+
+Test the PixelFormerPlus model and get depth maps on KITTI:  
+Rename the network folder of PixelFormerPlus model from networkssource to networks  
+Modify the datapaths of ground truth and raw data in the config files
+Set the parameter checkpoint_path to pretrained/NewModel_KITTI
+```
+python PixelFormerPlus/test.py arguments_test_kitti.txt
+```
+Test the PixelFormer model and get depth maps on HabitatDyn Validation set 1:
+Rename the network folder of PixelFormer model from networkssource to networks    
+Modify the datapaths of ground truth and raw data in the config files  
+Set the parameter filenames_file to data_splits/val1.txt  
+Set the parameter filenames_file_eval data_splits/val0102scenes.txt
+Set the parameter checkpoint_path to pretrained/PixelFormer_Validation1
+```
+python PixelFormerPlus/test.py arguments_test_habitat.txt
+```
+
+Test the PixelFormer model and get depth maps on HabitatDyn Validation set 2:  
+Rename the network folder of PixelFormer model from networkssource to networks  
+Modify the datapaths of ground truth and raw data in the config files 
+Set the parameter filenames_file to data_splits/val1.txt  
+Set the parameter filenames_file_eval data_splits/val16181619clips.txt
+Set the parameter checkpoint_path to pretrained/PixelFormer_Validation2
+```
+python PixelFormerPlus/test.py arguments_test_habitat.txt
+```
+Test the PixelFormerPlus model on HabitatDyn Validation set 1:  
+Rename the network folder of PixelFormerPlus model to networks  
+Modify the datapaths of ground truth and raw data in the config files 
+Set the parameter filenames_file to data_splits/val1.txt  
+Set the parameter filenames_file_eval data_splits/val0102scenes.txt
+Set the parameter checkpoint_path to pretrained/NewModel_Validation1
+```
+python PixelFormerPlus/test.py arguments_test_habitat.txt
+```
+
+Test the PixelFormerPlus model and get depth maps on HabitatDyn Validation set 2:  
+Rename the network folder of PixelFormerPlus model to networks  
+Modify the datapaths of ground truth and raw data in the config files 
+Set the parameter filenames_file to data_splits/val1.txt  
+Set the parameter filenames_file_eval data_splits/val16181619clips.txt
+Set the parameter checkpoint_path to pretrained/NewModel_Validation2
+```
+python PixelFormerPlus/test.py arguments_test_habitat.txt
+```
+Test the SemanticBins model and get depth maps on HabitatDyn Validation set 1:    
+Modify the datapaths of ground truth and raw data in the config files 
+Set the parameter filenames_file to data_splits/val1.txt  
+Set the parameter filenames_file_eval data_splits/val0102scenes.txt
+Set the parameter checkpoint_path to pretrained/SemanticBins_Validation1
+```
+python PixelFormerPlus/test_semantic.py arguments_test_habitat.txt
+```
+
+Test the SemanticBins model and get depth maps on HabitatDyn Validation set 2:    
+Modify the datapaths of ground truth and raw data in the config files 
+Set the parameter filenames_file to data_splits/val1.txt  
+Set the parameter filenames_file_eval data_splits/val16181619clips.txt
+Set the parameter checkpoint_path to pretrained/SemanticBins_Validation2
+```
+python PixelFormerPlus/test_semantic.py arguments_test_habitat.txt
+## Pretrained Models
+* You can download the pretrained models from [here](https://drive.google.com/drive/folders/1CupMODnxBe4JJ15jbet3nz2xgTjL5ExM?usp=drive_link)
+
 
 
 
